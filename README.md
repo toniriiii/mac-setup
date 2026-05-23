@@ -22,25 +22,25 @@ bash setup.sh
 
 | 분류 | 항목 |
 |------|------|
-| 기본 CLI | git, curl, wget, tree, jq, gnu-sed, nmap 등 |
-| Node.js | fnm + LTS 버전 자동 설치 |
+| 기본 CLI | git, git-flow, curl, wget, tree, jq, gnu-sed, nmap 등 |
+| Node.js | fnm + LTS 버전 자동 설치, bun |
 | Python | pyenv + pyenv-virtualenv |
 | Java | jenv |
-| 패키지 매니저 | pnpm, bun |
-| Shell | zsh + antigen + oh-my-zsh + spaceship-prompt |
-| 개발 앱 | iTerm2, VS Code, Cursor, Postman |
+| 패키지 매니저 | pnpm |
+| Shell | zsh + zinit + oh-my-zsh + spaceship-prompt |
+| 개발 앱 | iTerm2, VS Code, Cursor |
 | 브라우저 | Google Chrome |
-| 협업 | Slack, Notion, Discord, Zoom |
+| 협업 | Slack, Notion, Zoom |
 | AI | Claude Desktop |
 | 미디어 | IINA, VLC |
 
+> **주의:** Google Chrome, Slack, Zoom, Cursor는 sudo가 필요해 별도 실행이 필요할 수 있습니다.
+> ```bash
+> brew install --cask google-chrome slack zoom cursor
+> ```
+
 ## 별도 설치 필요 (자동화 어려운 것들)
 
-- **Figma** — figma.com 에서 다운로드
-- **Charles** — charlesproxy.com 에서 다운로드
-- **KakaoTalk** — App Store
-- **Microsoft Office** — 회사 라이선스로 설치
-- **Whale 브라우저** — whale.naver.com
 - **회사 보안 앱** (SentinelOne, Ivanti VPN 등) — IT팀 통해 설치
 
 ## 민감 정보 관리
