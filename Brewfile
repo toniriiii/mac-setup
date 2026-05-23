@@ -1,15 +1,13 @@
 ######################################
 # Taps
 ######################################
-tap "homebrew/bundle"
-
 
 ######################################
 # 기본 CLI 도구
 ######################################
 brew "git"
 brew "git-lfs"
-brew "git-flow-avh"
+brew "git-flow"
 brew "diff-so-fancy"
 brew "curl"
 brew "wget"
