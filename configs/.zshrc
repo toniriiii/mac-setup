@@ -2,29 +2,26 @@ function command_exists() {
   hash "$1" &>/dev/null
 }
 
-# ─── Antigen (oh-my-zsh) ───────────────────────────────────────────────────
-if command_exists brew; then
-  source $(brew --prefix)/share/antigen/antigen.zsh
-else
-  source /usr/local/share/antigen/antigen.zsh
-fi
+# ─── Zinit ─────────────────────────────────────────────────────────────────
+ZINIT_HOME="$(brew --prefix)/opt/zinit/zinit.zsh"
+[ -f "$ZINIT_HOME" ] && source "$ZINIT_HOME"
 
-antigen use oh-my-zsh
+# oh-my-zsh 플러그인
+zinit snippet OMZP::git
+zinit snippet OMZP::git-extras
+zinit snippet OMZP::git-flow
+zinit snippet OMZP::python
+zinit snippet OMZP::pip
+zinit snippet OMZP::node
+zinit snippet OMZP::npm
+zinit snippet OMZP::command-not-found
 
-antigen bundle git
-antigen bundle git-extras
-antigen bundle git-flow
-antigen bundle python
-antigen bundle pip
-antigen bundle node
-antigen bundle npm
-antigen bundle command-not-found
-antigen bundle zsh-users/zsh-syntax-highlighting
+# 외부 플러그인
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light mafredri/zsh-async
 
-antigen bundle mafredri/zsh-async@main
-antigen bundle denysdovhan/spaceship-prompt
-
-antigen apply
+# 테마 (spaceship)
+zinit light spaceship-prompt/spaceship-prompt
 
 # ─── Aliases ───────────────────────────────────────────────────────────────
 [ -f ~/.aliases ] && source ~/.aliases

@@ -28,7 +28,7 @@ brew "mas"
 # Shell
 ######################################
 brew "zsh"
-brew "antigen"
+brew "zinit"
 brew "autoenv"
 
 
@@ -62,9 +62,6 @@ brew "pnpm"
 # 개발 도구
 ######################################
 brew "imagemagick"
-brew "ffmpeg"
-brew "podman"
-brew "grype"
 brew "dockutil"
 
 
@@ -95,7 +92,6 @@ cask "google-chrome"
 ######################################
 cask "slack"
 cask "notion"
-cask "discord"
 cask "zoom"
 
 
